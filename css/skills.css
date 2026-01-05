@@ -1,0 +1,107 @@
+
+.skills-wrapper .section-heading {
+  margin-bottom: 1.2rem;
+}
+
+.skills-grid-logos {
+  background: #07101a;
+  border-radius: 0.75rem;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--border-soft);
+  margin-bottom: 1rem;
+}
+
+.skills-grid-logos h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.logo-row img {
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+
+
+.sub-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1.6rem 0 1rem;
+  color: #27ae60;
+  letter-spacing: 0.05em;
+}
+
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.1rem;
+  margin-top: 1.2rem;
+}
+
+.skill-title {
+  grid-column: 1 / -1;
+  margin-top: 1.8rem;
+  margin-bottom: .4rem;
+  font-size: 1.15rem;
+  color: #27ae60;
+  letter-spacing: .5px;
+}
+
+.skill-card {
+  background: #0f1b2a;
+  padding: 1.1rem;
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  color: #d5e4f0;
+  transition: 0.2s;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  color: #3b82f6;
+}
+
+
+.skill-card {
+    position: relative;           /* needed for absolute tooltip */
+    display:flex;
+    align-items: center;
+    gap: .8rem;
+    padding: 1.1rem;
+    border-radius: 12px;
+    background: #0f1b2a;          /* your card color */
+    cursor: default;
+}
+
+/* hidden by default */
+.skill-card .tooltip-box {
+    display: none;
+    position: absolute;
+    top: 110%;                    /* below the card */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #020617;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    z-index: 10;
+}
+
+/* show when hover on card */
+.skill-card:hover .tooltip-box {
+    display: block;
+}
+
+

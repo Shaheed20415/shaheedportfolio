@@ -1,0 +1,124 @@
+.achieve-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+}
+
+.achieve-card {
+    background: #07101a;
+    border: 1px solid #1f2933;
+    border-radius: 12px;
+    padding: 1rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.achieve-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.5);
+}
+
+.achieve-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.achieve-card h3 {
+    color: #27ae60;
+    margin: 5px 0;
+}
+
+.achieve-card p {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #04101a;
+    border: 1px solid #1f2933;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    color: white;
+    position: relative;         /* Important */
+    max-height: 90vh;           /* Prevent overflow */
+    overflow-y: auto;           /* Scroll if too long */
+}
+
+/* Modal Body */
+.modal-body img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+/* FIX: Close button always visible */
+.close {
+    position: absolute;         /* FIX */
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    z-index: 10000;
+}
+
+.close:hover {
+    color: #27ae60;
+}
+
+
+
+
+.modal-content {
+    background: #04101a;
+    border: 1px solid #1f2933;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 1300px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    max-height: 90vh;
+    overflow-y: auto; /* modal scrolls but close button stays fixed */
+    position: relative;
+}
+
+/* FIXED CLOSE BUTTON */
+.close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 999999;   /* Always on top */
+    background: rgba(0,0,0,0.6);
+    padding: 6px 12px;
+    border-radius: 50%;
+    color: rgb(233, 218, 218);
+    transition: 0.2s;
+}
+
+.close:hover {
+    background: rgba(255,255,255,0.9);
+    color: black;
+}

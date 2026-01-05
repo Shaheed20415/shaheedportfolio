@@ -1,0 +1,290 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Shaheed</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* FILTER BUTTONS */
+    .filter-buttons {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .filter-buttons button {
+      padding: 8px 18px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      margin: 0 8px;
+      background: #0b1722;
+      color: #d0dce5;
+      border: 1px solid #1f2933;
+      transition: 0.3s;
+    }
+    .filter-buttons button.active,
+    .filter-buttons button:hover {
+      background: #27ae60;
+      color: white;
+    }
+
+    /* PROJECT GRID */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .project-card {
+      background: #07101a;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #1f2933;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-card h3 {
+      padding: 1rem;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    /* POPUP MODAL */
+    .modal-bg {
+      position: fixed;
+      inset: 0;
+      display: none;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .modal-box {
+      background: #050b12;
+      width: 80%;
+      max-width: 900px;
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid #1f2933;
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+
+    .modal-box h2 {
+      color: #27ae60;
+      margin-bottom: 1rem;
+    }
+
+    .modal-box a {
+      color: #2ecc71;
+      text-decoration: underline;
+    }
+
+    .close-btn {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+      color: #aaa;
+    }
+    .close-btn:hover {
+      color: white;
+    }
+
+  </style>
+
+</head>
+<body>
+
+   <div class="app-shell">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-text-block">
+          <h1 class="hero-name">Mahammad<br>Shaheed</h1>
+          <p class="hero-im">I'm <span id="typing-role" class="hero-role"></span><span class="cursor">|</span></p>
+          <div class="hero-social">
+            <a href="www.linkedin.com/in/mahammad-shaheed-964b2228a" target="_blank" class="social-btn" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Shaheed20415" target="_blank" class="social-btn" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/m7uhammad__s8hahee6d.in/" target="_blank" class="social-btn" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mshaheed.work@example.com" class="social-btn" aria-label="Gmail">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a class="nav-item" href="index.html">Home</a>
+        <a class="nav-item" href="about.html">About</a>
+        <a class="nav-item" href="education.html">Education</a>
+        <a class="nav-item" href="skills.html">Skills</a>
+        <a class="nav-item" href="projects.html">Projects</a>
+        <a class="nav-item" href="certifications.html">Certifications</a>
+        <a class="nav-item" href="contact.html">Contact</a>
+        <a class="nav-item" href="achievement.html">Achievement</a>
+      </nav>
+    </header>
+<main class="page-area">
+
+
+<!-- NAVIGATION + HERO COMES HERE -->
+<!-- (Same layout as earlier pages) -->
+
+
+  <section class="page-inner">
+
+    <h2 class="section-heading">Projects</h2>
+
+    <!-- Filters -->
+    <div class="filter-buttons">
+      <button class="active">ALL</button>
+      <button>PROJECT</button>
+      <button>WEB-APP</button>
+    </div>
+
+    <!-- PROJECT GRID -->
+    <div class="projects-grid">
+
+      <!-- Example Project 1 -->
+        <div class="project-card" onclick="openProject('sunrise')">
+        <img src="img/sunrisescreenshot.png">
+        <h3>Full-Stack WebSite with Admin Dashboard</h3>
+      </div>
+
+       <div class="project-card" onclick="openProject('aibased')">
+        <img src="img/ai based project.png">
+        <h3> AI Based magazine creator and pdf generator</h3>
+      </div>
+
+     
+
+      <div class="project-card" onclick="openProject('heart')">
+        <img src="img/heartattacksproject.png">
+        <h3>Detection and tracking heart attacks using IOT</h3>
+      </div>
+
+      <div class="project-card" onclick="openProject('accident')">
+        <img src="img/accidentprevention.png">
+        <h3>Accident Prevention at Steepy Area</h3>
+      </div>
+
+     
+
+      <div class="project-card" onclick="openProject('portfolio')">
+        <img src="img/portfolio.png">
+        <h3>My Portfolio</h3>
+      </div>
+
+    </div>
+
+  </section>
+</main>
+
+<!-- POPUP MODAL -->
+<div class="modal-bg" id="projectModal">
+  <div class="modal-box" id="modalContent">
+    <span class="close-btn" onclick="closeProject()">&times;</span>
+  </div>
+</div>
+
+<script>
+function openProject(type) {
+  let content = "";
+
+  if (type === "sunrise") {
+    content = `
+      <h2>Full-Stack WebSite</h2>
+      <p><b>Tech Stack:</b>HTML, CSS, JS, PHP, SQL, NODEJS ETC </p>
+      <p><b>GitHub:</b> <a href="https://github.com/Shaheed20415/Sunrise.git">github Code Link</a></p>
+       <p><b>LiveLink:</b> <a href="https://sunrisemarketingsolutions.vercel.app/">sunirse Link</a></p>
+      <p>Landing page with admin dashboard features</p>
+    `;
+  }
+
+  if (type === "heart") {
+    content = `
+      <h2>Accident Prevention System</h2>
+      <p><b>Tech Stack:</b> Python, Image Processing</p>
+      <p><b>GitHub:</b> <a href="">Project Link</a></p>
+      <p>Full-Stack WebSite with Admin Dashboard and animation Video....</p>
+    `;
+  }
+
+   if (type === "accident") {
+    content = `
+      <h2>Accident Prevention System</h2>
+      <p><b>Tech Stack:</b> Python, Image Processing</p>
+      <p><b>GitHub:</b> <a href="#">Project Link</a></p>
+      <p>Full-Stack WebSite with Admin Dashboard and animation Video....</p>
+    `;
+  }
+
+   if (type === "aibased") {
+    content = `
+      <h2>AI-Based magazine creator and pdf generator</h2>
+      <p><b>Tech Stack:</b>html, css, js, nodejs etc</p>
+      <p><b>GitHub:</b> <a href="https://github.com/Shaheed20415/AI-Based-Magazine-creator-and-pdf-generator.git">Project Link</a></p>
+      <p>Full-Stack WebSite with Admin Dashboard and animation Video....</p>
+       <iframe src="img/Major_Project.pdf" width="100%" height="700px" style="border:none;"></iframe>
+
+    `;
+  }
+
+   if (type === "portfolio") {
+    content = `
+      <h2>Accident Prevention System</h2>
+      <p><b>Tech Stack:</b>html, css, js, etc</p>
+      <p><b>GitHub:</b> <a href="https://github.com/Shaheed20415/my_portfolio.git">Project Link</a></p>
+      <p>Full-Stack WebSite with Admin Dashboard and animation Video....</p>
+    `;
+  }
+
+  document.getElementById("modalContent").innerHTML =
+    `<span class='close-btn' onclick='closeProject()'>&times;</span>` + content;
+
+  document.getElementById("projectModal").style.display = "flex";
+}
+
+function closeProject() {
+  document.getElementById("projectModal").style.display = "none";
+}
+</script>
+
+ </main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Mahammad Shaheed. All rights reserved.</p>
+</footer>
+
+</div> <!-- app-shell end -->
+
+<script src="js/main.js"></script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Achievements</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/achievement.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+</head>
+
+<body>
+<div class="app-shell">
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-inner">
+          <div class="hero-text-block">
+              <h1 class="hero-name">Mahammad<br>Shaheed</h1>
+              <p class="hero-im">I'm <span id="typing-role" class="hero-role"></span><span class="cursor">|</span></p>
+
+              <div class="hero-social">
+                <a href="www.linkedin.com/in/mahammad-shaheed-964b2228a" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Shaheed20415" class="social-btn"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/m7uhammad__s8hahee6d.in/" class="social-btn"><i class="fab fa-instagram"></i></a>
+                <a href="mshaheed.work@example.com" class="social-btn"><i class="fa-regular fa-envelope"></i></a>
+              </div>
+          </div>
+      </div>
+
+      <nav class="main-nav">
+        <a class="nav-item" href="index.html">Home</a>
+        <a class="nav-item" href="about.html">About</a>
+        <a class="nav-item" href="education.html">Education</a>
+        <a class="nav-item" href="skills.html">Skills</a>
+        <a class="nav-item" href="projects.html">Projects</a>
+        <a class="nav-item" href="certifications.html">Certifications</a>
+        <a class="nav-item" href="contact.html">Contact</a>
+        <a class="nav-item active" href="achievement.html">Achievements</a>
+      </nav>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="page-area">
+        <section class="page-inner">
+            <h2 class="section-heading">Achievements</h2>
+
+            <div class="achieve-grid">
+
+                <div class="achieve-card" onclick="openModal('ach1')">
+                    <img src="img/achi1.jpg" alt="">
+                    <h3>Community Service Project (CSP)</h3>
+                    <p>
+                      Designed and contributed to a community-driven digital initiative aimed at bridging knowledge gaps through an accessible learning portal.
+                    </p>
+                </div>
+
+                <div class="achieve-card" onclick="openModal('ach2')">
+                    <img src="img/csp1.jpg" alt="">
+                    <h3>Eco-Friendly Vehicle Concept</h3>
+                    <p>
+                      Developed and presented a sustainable vehicle concept focused on energy efficiency and environmental responsibility.
+                    </p>
+                </div>
+
+                <div class="achieve-card" onclick="openModal('ach3')">
+                    <img src="img/hci.jpg" alt="">
+                    <h3>Concept Explanation & Peer Teaching</h3>
+                    <p>
+                      Actively participated in classroom teaching sessions by explaining technical concepts using real-world examples.
+                    </p>
+                </div>
+
+                <div class="achieve-card" onclick="openModal('ach4')">
+                    <img src="img/minor1.jpg" alt="">
+                    <h3>Accident Prevention System in Steep Areas</h3>
+                    <p>
+                      Minor Project–I focused on designing a safety solution for accident prevention in steep regions, earning an A Grade.
+                    </p>
+                </div>
+
+                <div class="achieve-card" onclick="openModal('ach5')">
+                    <img src="img/workshop1.jpg" alt="">
+                    <h3>Prototype Design Workshop (AI Lane Detection)</h3>
+                    <p>
+                      Participated in a hands-on workshop implementing AI-based lane detection and secured 3rd position among participants.
+                    </p>
+                </div>
+
+                <div class="achieve-card" onclick="openModal('ach6')">
+                    <img src="img/review1.jpg" alt="">
+                    <h3>Project Review & Improvement Session</h3>
+                    <p>
+                      Presented project progress in formal review meetings and incorporated expert feedback to improve project outcomes.
+                    </p>
+                </div>
+
+                <div class="achieve-card" onclick="openModal('ach7')">
+                    <img src="img/convaction.jpg" alt="">
+                    <h3>Convocation Ceremony</h3>
+                    <p>
+                      Successfully completed academic milestones and participated in the official convocation ceremony.
+                    </p>
+                </div>
+
+                <div class="achieve-card" onclick="openModal('ach8')">
+                    <img src="img/techmahi.jpg" alt="">
+                    <h3>Tech Mahindra Manufacturing Workshop</h3>
+                    <p>
+                      Attended an industry-focused workshop gaining insights into manufacturing processes and real-world applications.
+                    </p>
+                </div>
+
+                <div class="achieve-card" onclick="openModal('ach9')">
+                    <img src="img/english.jpg" alt="">
+                    <h3>Group Discussion & Debate Session</h3>
+                    <p>
+                      Participated in structured group discussions and debates, enhancing communication and critical thinking skills.
+                    </p>
+                </div>
+
+                <div class="achieve-card" onclick="openModal('ach10')">
+                    <img src="img/graphic.jpg" alt="">
+                    <h3>Engineering Graphics Quiz</h3>
+                    <p>
+                      Participated in a technical quiz on Engineering Graphics, demonstrating strong visualization skills.
+                    </p>
+                </div>
+
+                <div class="achieve-card" onclick="openModal('ach11')">
+                    <img src="img/project_review.jpeg" alt="">
+                    <h3>IoT Project Completion Review</h3>
+                    <p>
+                      Engaged in final project evaluation discussions for an IoT-based heart detection system.
+                    </p>
+                </div>
+
+                <div class="achieve-card" onclick="openModal('ach12')">
+                    <img src="img/maths.jpg" alt="">
+                    <h3>Problem-Solving & Analytical Skills Session</h3>
+                    <p>
+                      Participated in focused sessions aimed at strengthening logical reasoning and analytical problem-solving abilities.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Mahammad Shaheed. All rights reserved.</p>
+    </footer>
+
+</div>
+
+<!-- POPUP MODALS -->
+
+<div id="ach1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ach1')">&times;</span>
+    <img src="img/achi1.jpg">
+    <h2>Community Service Project (CSP)</h2>
+    <p>
+      This project focused on creating a digital platform to bridge educational gaps by providing accessible learning resources to the community.
+    </p>
+  </div>
+</div>
+
+<div id="ach2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ach2')">&times;</span>
+    <img src="img/csp1.jpg">
+    <h2>Eco-Friendly Vehicle Concept</h2>
+    <p>
+      Designed a sustainable vehicle model emphasizing environmental responsibility, innovation, and efficient energy usage.
+    </p>
+  </div>
+</div>
+
+<div id="ach3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ach3')">&times;</span>
+    <img src="img/hci.jpg">
+    <h2>Peer Teaching & Concept Presentation</h2>
+    <p>
+      Actively contributed to peer learning by explaining technical concepts clearly during classroom discussion sessions.
+    </p>
+  </div>
+</div>
+
+<div id="ach4" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ach4')">&times;</span>
+    <img src="img/minor1.jpg">
+    <h2>Accident Prevention System</h2>
+    <p>
+      Minor Project–I focused on designing a preventive safety system for steep areas, earning an A Grade for innovation.
+    </p>
+  </div>
+</div>
+
+<div id="ach5" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ach5')">&times;</span>
+    <img src="img/workshop1.jpg">
+    <h2>AI-Based Prototype Design Workshop</h2>
+    <p>
+      Implemented AI-based lane detection in a competitive workshop and achieved 3rd position among participants.
+    </p>
+  </div>
+</div>
+
+<div id="ach6" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ach6')">&times;</span>
+    <img src="img/review1.jpg">
+    <h2>Project Review & Enhancement</h2>
+    <p>
+      Presented project progress, received expert feedback, and applied improvements to enhance performance and clarity.
+    </p>
+  </div>
+</div>
+
+<div id="ach7" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ach7')">&times;</span>
+    <img src="img/convaction.jpg">
+    <h2>Convocation Ceremony</h2>
+    <p>
+      Celebrated academic achievements and successful completion of degree requirements during the official convocation.
+    </p>
+  </div>
+</div>
+
+<div id="ach8" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ach8')">&times;</span>
+    <img src="img/techmahi.jpg">
+    <h2>Tech Mahindra Industrial Workshop</h2>
+    <p>
+      Gained practical exposure to manufacturing processes and industrial workflows through hands-on sessions.
+    </p>
+  </div>
+</div>
+
+<div id="ach9" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ach9')">&times;</span>
+    <img src="img/english.jpg">
+    <h2>Group Discussion & Debate</h2>
+    <p>
+      Participated in structured debates and group discussions to enhance communication and analytical thinking.
+    </p>
+  </div>
+</div>
+
+<div id="ach10" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ach10')">&times;</span>
+    <img src="img/graphic.jpg">
+    <h2>Engineering Graphics Quiz</h2>
+    <p>
+      Demonstrated strong conceptual understanding and visualization skills through participation in technical quizzes.
+    </p>
+  </div>
+</div>
+
+<div id="ach11" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ach11')">&times;</span>
+    <img src="img/project_review.jpeg">
+    <h2>IoT Project Review Panel</h2>
+    <p>
+      Took part in final evaluation discussions for an IoT-based heart detection project focusing on design and execution.
+    </p>
+  </div>
+</div>
+
+<div id="ach12" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('ach12')">&times;</span>
+    <img src="img/maths.jpg">
+    <h2>Analytical & Problem-Solving Skills Session</h2>
+    <p>
+      Participated in focused learning sessions aimed at strengthening mathematical reasoning and analytical skills.
+    </p>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = "flex";
+}
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+</script>
+
+</body>
+</html>
