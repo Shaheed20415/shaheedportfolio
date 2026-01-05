@@ -1,19 +1,15 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Shaheed</title>
+  <title>Shaheed | Projects</title>
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/projects.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
-    /* FILTER BUTTONS */
     .filter-buttons {
       text-align: center;
       margin-bottom: 2rem;
@@ -21,7 +17,6 @@
     .filter-buttons button {
       padding: 8px 18px;
       border-radius: 20px;
-      border: none;
       cursor: pointer;
       margin: 0 8px;
       background: #0b1722;
@@ -35,7 +30,6 @@
       color: white;
     }
 
-    /* PROJECT GRID */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -67,7 +61,6 @@
       font-size: 1.2rem;
     }
 
-    /* POPUP MODAL */
     .modal-bg {
       position: fixed;
       inset: 0;
@@ -109,102 +102,78 @@
     .close-btn:hover {
       color: white;
     }
-
   </style>
-
 </head>
+
 <body>
+<div class="app-shell">
 
-   <div class="app-shell">
-    <header class="hero">
-      <div class="hero-inner">
-        <div class="hero-text-block">
-          <h1 class="hero-name">Mahammad<br>Shaheed</h1>
-          <p class="hero-im">I'm <span id="typing-role" class="hero-role"></span><span class="cursor">|</span></p>
-          <div class="hero-social">
-            <a href="www.linkedin.com/in/mahammad-shaheed-964b2228a" target="_blank" class="social-btn" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/Shaheed20415" target="_blank" class="social-btn" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.instagram.com/m7uhammad__s8hahee6d.in/" target="_blank" class="social-btn" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="mshaheed.work@example.com" class="social-btn" aria-label="Gmail">
-              <i class="fa-regular fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <nav class="main-nav">
-        <a class="nav-item" href="index.html">Home</a>
-        <a class="nav-item" href="about.html">About</a>
-        <a class="nav-item" href="education.html">Education</a>
-        <a class="nav-item" href="skills.html">Skills</a>
-        <a class="nav-item" href="projects.html">Projects</a>
-        <a class="nav-item" href="certifications.html">Certifications</a>
-        <a class="nav-item" href="contact.html">Contact</a>
-        <a class="nav-item" href="achievement.html">Achievement</a>
-      </nav>
-    </header>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-text-block">
+      <h1 class="hero-name">Mahammad<br>Shaheed</h1>
+      <p class="hero-im">I'm <span id="typing-role" class="hero-role"></span><span class="cursor">|</span></p>
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <a class="nav-item" href="index.html">Home</a>
+    <a class="nav-item" href="about.html">About</a>
+    <a class="nav-item" href="education.html">Education</a>
+    <a class="nav-item" href="skills.html">Skills</a>
+    <a class="nav-item" href="projects.html">Projects</a>
+    <a class="nav-item" href="certifications.html">Certifications</a>
+    <a class="nav-item" href="contact.html">Contact</a>
+    <a class="nav-item" href="achievement.html">Achievement</a>
+     <a class="nav-item" href="ShaheedFullStackDeveloper_Resume.pdf" target="_blank">Resume</a>
+  </nav>
+</header>
+
 <main class="page-area">
+<section class="page-inner">
 
+<h2 class="section-heading">Projects</h2>
 
-<!-- NAVIGATION + HERO COMES HERE -->
-<!-- (Same layout as earlier pages) -->
+<!-- FILTERS -->
+<div class="filter-buttons">
+  <button class="active" data-filter="all">ALL</button>
+  <button data-filter="project">PROJECT</button>
+  <button data-filter="web">WEB-APP</button>
+</div>
 
+<!-- PROJECT GRID -->
+<div class="projects-grid">
 
-  <section class="page-inner">
+  <div class="project-card" data-category="web" onclick="openProject('sunrise')">
+    <img src="img/sunrisescreenshot.png">
+    <h3>Full-Stack Website with Admin Dashboard</h3>
+  </div>
 
-    <h2 class="section-heading">Projects</h2>
+  <div class="project-card" data-category="web" onclick="openProject('aibased')">
+    <img src="img/ai based project.png">
+    <h3>AI Magazine Creator & PDF Generator</h3>
+  </div>
 
-    <!-- Filters -->
-    <div class="filter-buttons">
-      <button class="active">ALL</button>
-      <button>PROJECT</button>
-      <button>WEB-APP</button>
-    </div>
+  <div class="project-card" data-category="project" onclick="openProject('heart')">
+    <img src="img/heartattacksproject.png">
+    <h3>IoT Heart Attack Detection</h3>
+  </div>
 
-    <!-- PROJECT GRID -->
-    <div class="projects-grid">
+  <div class="project-card" data-category="project" onclick="openProject('accident')">
+    <img src="img/accidentprevention.png">
+    <h3>Accident Prevention System</h3>
+  </div>
 
-      <!-- Example Project 1 -->
-        <div class="project-card" onclick="openProject('sunrise')">
-        <img src="img/sunrisescreenshot.png">
-        <h3>Full-Stack WebSite with Admin Dashboard</h3>
-      </div>
+  <div class="project-card" data-category="web" onclick="openProject('portfolio')">
+    <img src="img/portfolio.png">
+    <h3>Personal Portfolio</h3>
+  </div>
 
-       <div class="project-card" onclick="openProject('aibased')">
-        <img src="img/ai based project.png">
-        <h3> AI Based magazine creator and pdf generator</h3>
-      </div>
-
-     
-
-      <div class="project-card" onclick="openProject('heart')">
-        <img src="img/heartattacksproject.png">
-        <h3>Detection and tracking heart attacks using IOT</h3>
-      </div>
-
-      <div class="project-card" onclick="openProject('accident')">
-        <img src="img/accidentprevention.png">
-        <h3>Accident Prevention at Steepy Area</h3>
-      </div>
-
-     
-
-      <div class="project-card" onclick="openProject('portfolio')">
-        <img src="img/portfolio.png">
-        <h3>My Portfolio</h3>
-      </div>
-
-    </div>
-
-  </section>
+</div>
+</section>
 </main>
 
-<!-- POPUP MODAL -->
+<!-- MODAL -->
 <div class="modal-bg" id="projectModal">
   <div class="modal-box" id="modalContent">
     <span class="close-btn" onclick="closeProject()">&times;</span>
@@ -212,59 +181,109 @@
 </div>
 
 <script>
+/* FILTER LOGIC */
+const filterButtons = document.querySelectorAll(".filter-buttons button");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    filterButtons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    const filter = button.dataset.filter;
+    projectCards.forEach(card => {
+      card.style.display =
+        filter === "all" || card.dataset.category === filter ? "block" : "none";
+    });
+  });
+});
+
+/* MODAL CONTENT */
 function openProject(type) {
   let content = "";
 
   if (type === "sunrise") {
     content = `
-      <h2>Full-Stack WebSite</h2>
-      <p><b>Tech Stack:</b>HTML, CSS, JS, PHP, SQL, NODEJS ETC </p>
-      <p><b>GitHub:</b> <a href="https://github.com/Shaheed20415/Sunrise.git">github Code Link</a></p>
-       <p><b>LiveLink:</b> <a href="https://sunrisemarketingsolutions.vercel.app/">sunirse Link</a></p>
-      <p>Landing page with admin dashboard features</p>
+      <h2>Full-Stack Business Website with Admin Dashboard</h2>
+      <p><b>Tech Stack:</b> HTML, CSS, JavaScript, PHP, MySQL, Node.js</p>
+      <p><b>GitHub:</b> <a href="https://github.com/Shaheed20415/Sunrise.git" target="_blank">GitHub Code</a></p>
+      <p><b>LiveLink:</b> <a href="https://sunrisemarketingsolutions.vercel.app/" target="_blank">Live Website</a></p>
+      <p><b>Description</b>
+      A real-world full-stack business website developed for professional use.
+      Features a responsive landing page optimized for all devices.
+      Includes a secure admin dashboard for managing content dynamically.
+      Backend handles data storage, authentication, and updates.
+      Integrated AI chatbot improves customer interaction.
+      Built with scalability and performance in mind.
+      </p>`;
+  }
+
+  if (type === "aibased") {
+    content = `
+      <h2>AI-Based Magazine Creator & PDF Generator</h2>
+      <p><b>Tech Stack:</b> Python, HTML, CSS, JavaScript, Node.js, Gemini API</p>
+      <p><b>GitHub:</b> <a href="https://github.com/Shaheed20415/AI-Based-Magazine-creator-and-pdf-generator.git" target="_blank">Project Link</a></p>
+      <p><b>Description</b>
+      An AI-powered web platform for automated magazine creation.
+      Users generate content and images using AI prompts.
+      AI formats data into professional magazine layouts.
+      Supports customization of text and visual structure.
+      Enables instant PDF generation and download.
+      Ideal for digital publishing and content automation.
+      </p>
+      <iframe src="img/Major_Project.pdf" width="100%" height="700px" style="border:none;"></iframe>
     `;
   }
 
   if (type === "heart") {
     content = `
-      <h2>Accident Prevention System</h2>
-      <p><b>Tech Stack:</b> Python, Image Processing</p>
-      <p><b>GitHub:</b> <a href="">Project Link</a></p>
-      <p>Full-Stack WebSite with Admin Dashboard and animation Video....</p>
-    `;
+      <h2>IoT-Based Heart Attack Detection & Monitoring System</h2>
+      <p><b>Tech Stack:</b> Arduino, Pulse Sensor, Wi-Fi Module, LCD Display</p>
+      <p><b>GitHub:</b> <a href="#" target="_blank">Project Link</a></p>
+      <p><b>Description</b>
+      An IoT healthcare system for continuous heart rate monitoring.
+      Pulse sensors capture real-time health data.
+      Abnormal heart activity is detected automatically.
+      Data is transmitted wirelessly for monitoring.
+      Designed to be cost-effective and accessible.
+      Helps in early detection and medical response.
+      </p>
+      <iframe src="minor-II.pdf" width="100%" height="700px" style="border:none;"></iframe>`;
   }
 
-   if (type === "accident") {
+  if (type === "accident") {
     content = `
-      <h2>Accident Prevention System</h2>
-      <p><b>Tech Stack:</b> Python, Image Processing</p>
-      <p><b>GitHub:</b> <a href="#">Project Link</a></p>
-      <p>Full-Stack WebSite with Admin Dashboard and animation Video....</p>
-    `;
+      <h2>Accident Prevention System for Steep Areas</h2>
+      <p><b>Tech Stack:</b> Ultrasonic Sensors, Microcontroller, LED Indicators</p>
+      <p><b>GitHub:</b> <a href="#" target="_blank">Project Link</a></p>
+      <p><b>Description</b>
+      A safety-focused hardware system for accident prevention.
+      Detects vehicles or obstacles in steep or curved roads.
+      Ultrasonic sensors measure distance in real time.
+      LED alerts warn drivers of potential collisions.
+      Suitable for blind curves and hilly regions.
+      Designed for reliability and low power consumption.
+      </p>
+      <iframe src="MINOR_PROJECT1.pdf" width="100%" height="700px" style="border:none;"></iframe>`;
   }
 
-   if (type === "aibased") {
+  if (type === "portfolio") {
     content = `
-      <h2>AI-Based magazine creator and pdf generator</h2>
-      <p><b>Tech Stack:</b>html, css, js, nodejs etc</p>
-      <p><b>GitHub:</b> <a href="https://github.com/Shaheed20415/AI-Based-Magazine-creator-and-pdf-generator.git">Project Link</a></p>
-      <p>Full-Stack WebSite with Admin Dashboard and animation Video....</p>
-       <iframe src="img/Major_Project.pdf" width="100%" height="700px" style="border:none;"></iframe>
-
-    `;
-  }
-
-   if (type === "portfolio") {
-    content = `
-      <h2>Accident Prevention System</h2>
-      <p><b>Tech Stack:</b>html, css, js, etc</p>
-      <p><b>GitHub:</b> <a href="https://github.com/Shaheed20415/my_portfolio.git">Project Link</a></p>
-      <p>Full-Stack WebSite with Admin Dashboard and animation Video....</p>
-    `;
+      <h2>Personal Portfolio & Project Showcase Website</h2>
+      <p><b>Tech Stack:</b> HTML, CSS, JavaScript</p>
+      <p><b>GitHub:</b> <a href="https://github.com/Shaheed20415/my_portfolio.git" target="_blank">Project Link</a></p>
+      <p><b>Description</b>
+      A modern personal portfolio website showcasing my profile.
+      Displays skills, projects, education, and achievements.
+      Designed with clean UI and responsive layout.
+      Smooth animations enhance user experience.
+      Acts as a professional digital identity.
+      Useful for recruiters and networking opportunities.
+      </p>`;
   }
 
   document.getElementById("modalContent").innerHTML =
-    `<span class='close-btn' onclick='closeProject()'>&times;</span>` + content;
+    "<span class='close-btn' onclick='closeProject()'>&times;</span>" + content;
 
   document.getElementById("projectModal").style.display = "flex";
 }
@@ -274,17 +293,11 @@ function closeProject() {
 }
 </script>
 
- </main>
-
 <footer class="footer">
   <p>© <span id="year"></span> Mahammad Shaheed. All rights reserved.</p>
 </footer>
 
-</div> <!-- app-shell end -->
-
 <script src="js/main.js"></script>
-</body>
-</html>
-
+</div>
 </body>
 </html>
