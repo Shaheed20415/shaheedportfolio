@@ -4,3 +4,66 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.4rem;
 }
+
+
+/* ===============================
+   PROJECTS – MOBILE RESPONSIVE FIX
+   KEEP DESKTOP STYLE
+   =============================== */
+
+@media (max-width: 768px) {
+
+  /* prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* FORCE grid to single column */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem;
+  }
+
+  /* project cards remain same style */
+  .project-card {
+    transform: none;
+  }
+
+  /* image height scales naturally */
+  .project-card img {
+    height: auto;
+    max-height: 220px;
+  }
+
+  /* filter buttons wrap */
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .filter-buttons button {
+    margin: 0;
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+
+  /* modal fits mobile */
+  .modal-box {
+    width: 92%;
+    max-width: 92%;
+    padding: 1.2rem;
+  }
+
+  /* iframe safe inside modal */
+  .modal-box iframe {
+    height: 380px;
+  }
+
+  /* modal scroll safe */
+  .modal-box {
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+}

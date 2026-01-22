@@ -195,3 +195,71 @@
 .close-popup:hover {
   color: white;
 }
+
+
+
+/* ===============================
+   MOBILE RESPONSIVE – KEEP STYLE
+   =============================== */
+
+@media (max-width: 768px) {
+
+  /* prevent side scroll */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* keep same layout, just stack */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* image scales, style preserved */
+  .about-photo img {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+  }
+
+  /* text stays left aligned */
+  .about-text {
+    padding: 0;
+  }
+
+  .about-text p {
+    font-size: 0.95rem; /* SAME as desktop */
+    line-height: 1.6rem;
+  }
+
+  /* details stay clean, no overflow */
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-item {
+    font-size: 0.95rem;
+    white-space: normal;
+  }
+
+  /* interests keep card style */
+  .interests-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .interest-card {
+    padding: 1rem;
+  }
+
+  /* popup should never overflow */
+  .popup-box {
+    width: 92%;
+    max-width: 360px;
+  }
+
+  /* nav stays same style, wraps cleanly */
+  .main-nav {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+}

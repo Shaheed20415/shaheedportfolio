@@ -108,3 +108,33 @@
     font-size: 24px;
     cursor: pointer;
 }
+
+/* ===============================
+   CERTIFICATIONS – FINAL MOBILE FIX
+   =============================== */
+
+@media (max-width: 768px) {
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* FORCE grid to single column */
+  .cert-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* STACK card content */
+  .cert-card {
+    flex-direction: column !important;
+    align-items: flex-start;
+    padding: 1.2rem;
+  }
+
+  /* OVERRIDE forced image width */
+  .cert-card img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
